@@ -14,8 +14,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'JakeLeoEverton1983', // Replace with your actual database password
-    database: 'efc_cards1'   // Replace with your actual database name
+    password: 'your_password', // Replace with your actual database password
+    database: 'your_database'   // Replace with your actual database name
 });
 
 db.connect((err) => {
@@ -67,6 +67,14 @@ const verifyToken = (req, res, next) => {
 
 app.get('/cards', (req, res) => {
     db.query('SELECT * FROM efc_cards1', (err, result) => {
+        if (err) throw err;
+        res.send(result);
+    });
+});
+
+app.get('/cards/search', (req, res) => {
+    const { query } = req.query;
+    db.query('SELECT * FROM efc_cards1 WHERE First_Name LIKE ? OR Last_Name LIKE ?', [`%${query}%`, `%${query}%`], (err, result) => {
         if (err) throw err;
         res.send(result);
     });
