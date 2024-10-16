@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>Trading Card Tracker</h1>
-    
     <h2>Register</h2>
     <form id="register-form">
         <input type="text" id="reg-username" placeholder="Username" required>
@@ -23,7 +22,9 @@
         <button type="submit">Login</button>
     </form>
 
-    <h2>Add Card</h2>
+    <input type="text" id="search" placeholder="Search by Player Name">
+    <div id="card-container"></div>
+
     <form id="card-form">
         <input type="hidden" id="card-id">
         <input type="text" id="released" placeholder="Released">
@@ -34,18 +35,13 @@
         <input type="text" id="auto-patch" placeholder="AutoPatch">
         <input type="text" id="first-name" placeholder="First Name">
         <input type="text" id="last-name" placeholder="Last Name">
-        <input type="text" id="collecting" placeholder
+        <input type="text" id="collecting" placeholder="Collecting">
+        <input type="text" id="got" placeholder="Got">
+        <input type="text" id="front-photo" placeholder="Front Photo URL">
+        <input type="text" id="back-photo" placeholder="Back Photo URL">
+        <button type="submit">Add Card</button>
+    </form>
 
-        <h2>Register</h2>
-<form id="register-form">
-    <input type="text" id="reg-username" placeholder="Username" required>
-    <input type="password" id="reg-password" placeholder="Password" required>
-    <button type="submit">Register</button>
-</form>
-
-<h2>Login</h2>
-<form id="login-form">
-    <input type="text" id="login-username" placeholder="Username" required>
-    <input type="password" id="login-password" placeholder="Password" required>
-    <button type="submit">Login</button>
-</form>
+    <script src="script.js"></script>
+</body>
+</html>
