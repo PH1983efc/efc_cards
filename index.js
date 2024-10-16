@@ -72,6 +72,7 @@ app.get('/cards', (req, res) => {
     });
 });
 
+
 app.get('/cards/search', (req, res) => {
     const { query } = req.query;
     db.query('SELECT * FROM efc_cards1 WHERE First_Name LIKE ? OR Last_Name LIKE ?', [`%${query}%`, `%${query}%`], (err, result) => {
