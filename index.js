@@ -14,8 +14,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'your_password', // Replace with your actual database password
-    database: 'your_database'   // Replace with your actual database name
+    password: 'JakeLeoEverton1983', // Replace with your actual database password
+    database: 'efc_cards1'   // Replace with your actual database name
 });
 
 db.connect((err) => {
