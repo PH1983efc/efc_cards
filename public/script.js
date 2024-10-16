@@ -122,4 +122,20 @@ function loadCards() {
                     <p>Card Number: ${card.Card_Number}</p>
                     <p>Information: ${card.Information}</p>
                     <p>Numbered: ${card.Numbered}</p>
-                    <p>AutoPatch: ${
+                    <p>AutoPatch: ${card.AutoPatch}</p>
+                    <p>Collecting: ${card.Collecting}</p>
+                    <p>Got: ${card.Got}</p>
+                    <img src="${card.Front_Photo}" alt="Front Photo" style="width: 100px;">
+                    <img src="${card.Back_Photo}" alt="Back Photo" style="width: 100px;">
+                    <button onclick="editCard(${card.CardID})">Edit</button>
+                    <button onclick="deleteCard(${card.CardID})">Delete</button>
+                `;
+                cardContainer.appendChild(cardElement);
+            });
+        });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadCards();
+    // Rest of your code for form submissions, etc.
+});
